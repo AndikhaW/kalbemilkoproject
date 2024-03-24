@@ -103,6 +103,11 @@ class PenilaianController extends BaseController
         // Load your MateriModel here
         $materiModel = new MateriModel();
 
+        $subDepartmentsModel = new SubDepartmentsModel();
+
+        $subDepartment = $subDepartmentsModel->find($subDepartmentId);
+        $subDepartmentName = $subDepartment ? $subDepartment['sub_department_name'] : '';
+
         // Fetch the related sub_klausuls and materi for each question
         foreach ($questions as &$question) {
             $questionId = $question['question_id'];
@@ -124,7 +129,7 @@ class PenilaianController extends BaseController
         $userData = $session->get('user_data');
 
         // Pass the data to the view, including $subDepartmentId and $userData
-        return view('show_questions', ['questions' => $questions, 'subDepartmentId' => $subDepartmentId, 'userData' => $userData]);
+        return view('show_questions', ['questions' => $questions, 'subDepartmentId' => $subDepartmentId, 'subDepartmentName' => $subDepartmentName, 'userData' => $userData]);
     }
 
 

@@ -27,15 +27,18 @@
         }
 
         .question-container {
-            border: 1px solid #d1d3e2; /* Adjust the border color based on your design */
+            border: 1px solid #d1d3e2;
+            /* Adjust the border color based on your design */
             padding: 20px;
             border-radius: 8px;
             margin-bottom: 20px;
-            overflow: hidden; /* Clear float */
+            overflow: hidden;
+            /* Clear float */
         }
 
         h3 {
-            color: #4e73df; /* Adjust the color based on your design */
+            color: #4e73df;
+            /* Adjust the color based on your design */
             margin-top: 30px;
         }
 
@@ -76,7 +79,8 @@
         }
 
         #content {
-            width: calc(100% - 250px); /* Adjust the width based on your sidebar width */
+            width: calc(100% - 250px);
+            /* Adjust the width based on your sidebar width */
         }
 
         .fixed-sidebar {
@@ -126,7 +130,8 @@
 
                 <!-- ... (your existing code) ... -->
 
-                <h2 class="mt-4">Audits</h2>
+                <h2 class="mt-4">Audit <?= esc($subDepartmentName) ?></h2>
+
 
                 <form method="post" action="<?= site_url("penilaian/showQuestions/processAnswers/{$subDepartmentId}") ?>">
                     <?php

@@ -118,7 +118,7 @@
         <!-- End of Sidebar -->
         <div id="content" class="bg-gray-100">
             <div class="container-fluid">
-                <h2 class="mt-4">Audits</h2>
+                <h2 class="mt-4">CAPA</h2>
 
                 <form action="<?= base_url('show_audits/submitAuditDetails') ?>" method="post" enctype="multipart/form-data">
                     <?php
